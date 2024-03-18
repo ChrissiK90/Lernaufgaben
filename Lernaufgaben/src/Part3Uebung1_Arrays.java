@@ -6,7 +6,7 @@ public class Part3Uebung1_Arrays {
 
     public static void main(String[] arc) {
 
-        // array1();
+         array1();
         // array2();
         // array3();
         // array4();
@@ -30,10 +30,23 @@ public class Part3Uebung1_Arrays {
 
     public static void array1() {
 
+        /*
+        1. Schreibe ein Programm, das ein Array von 10 Ganzzahlen erzeugt und diese
+           anschließend, Element für Element (nicht alles auf einmal), in der Konsole ausgibt.
+         */
+
+        //Deklaration und Initialisierung des Arrays. In der letzeren Klammer wird die Anzahl der Elemente angegeben
         int[] meinArray = new int[10];
 
-        for (int i = 0; i < 10; i++) {
-            meinArray[i] = i;
+        //Objekt random der Klasse random wird erzeugt
+        Random random = new Random();
+
+        //for schleife: um alle zahlen auszugeben. zähler i wird auf 0 gesetzt. Abbruchbedingung: wenn i GRÖSSER
+        //als die länge vom array ist. Solange i kleiner als die länge vom array ist, läuft die schleife. i zählt hoch.
+        for (int i = 0; i < meinArray.length; i++) {
+
+            //
+            meinArray[i] = random.nextInt(1,10);
             System.out.println(meinArray[i]);
         }
     }
